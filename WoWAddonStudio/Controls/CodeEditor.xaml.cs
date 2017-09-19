@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.IO;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Xml;
+using ICSharpCode.AvalonEdit.Highlighting;
+using ICSharpCode.AvalonEdit.Highlighting.Xshd;
 
 namespace WoWAddonStudio.Controls
 {
@@ -23,6 +14,22 @@ namespace WoWAddonStudio.Controls
         public CodeEditor()
         {
             InitializeComponent();
+            InitializeHighlighter();
+        }
+
+        /// <summary>
+        /// Loads the custom highlighter from the definitions directory.
+        /// </summary>
+        private void InitializeHighlighter()
+        {
+            using (var stream = File.OpenRead("Definitions/lua.xshd"))
+            {
+                var reader = new XmlTextReader(stream);
+                var definition = HighlightingLoader.Load(reader, HighlightingManager.Instance);
+                textEditor.SyntaxHighlighting = definition;
+                reader.Close();
+                stream.Close();
+            }
         }
     }
 }

@@ -12,7 +12,8 @@
             xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
             Name="textEditor"
             FontFamily="Consolas"
-            SyntaxHighlighting="C#"
-            FontSize="10pt"/>
+            SyntaxHighlighting="Lua"
+            FontSize="10pt" 
+            ShowLineNumbers="True"/>
     </DockPanel>
 </UserControl>
