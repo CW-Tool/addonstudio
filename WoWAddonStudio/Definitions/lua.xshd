@@ -33,6 +33,7 @@
       <Word>until</Word>
       <Word>do</Word>
       <Word>for</Word>
+      <Word>in</Word>
       <Word>end</Word>
     </Keywords>
 
@@ -50,6 +51,7 @@
     <Keywords color="Special">
       <Word>and</Word>
       <Word>or</Word>
+      <Word>not</Word>
     </Keywords>
 
     <Keywords fontWeight="bold" color="Special">
