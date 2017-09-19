@@ -26,7 +26,7 @@ namespace WoWAddonStudio.Controls
             {
                 var reader = new XmlTextReader(stream);
                 var definition = HighlightingLoader.Load(reader, HighlightingManager.Instance);
-                textEditor.SyntaxHighlighting = definition;
+                Editor.SyntaxHighlighting = definition;
                 reader.Close();
                 stream.Close();
             }

@@ -10,10 +10,13 @@
     <DockPanel HorizontalAlignment="Stretch">
         <avalonEdit:TextEditor
             xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
-            Name="textEditor"
+            Name="Editor"
             FontFamily="Consolas"
             SyntaxHighlighting="Lua"
             FontSize="10pt" 
-            ShowLineNumbers="True"/>
+            ShowLineNumbers="True" 
+            Background="#FF1E1E1E" 
+            Foreground="#FFECF0F1"
+            LineNumbersForeground="#FFECF0F1"/>
     </DockPanel>
 </UserControl>
